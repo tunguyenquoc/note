@@ -1,0 +1,10 @@
+version: '3.4'
+
+services:
+  ex-docker:
+    image: ex-docker
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 80
