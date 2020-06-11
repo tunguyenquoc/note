@@ -3,6 +3,11 @@ version: '3.4'
 services:
   ex-docker:
     image: my-apache2
-    build: .
+    build:
+      context: .
+      # args:
+      #   APACHE_LOG_TYPE: file
+    # environment:
+    # APACHE_LOG_TYPE: stdout
     ports:
       - 3000:80
